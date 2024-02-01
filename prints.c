@@ -92,14 +92,14 @@ void pChar(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pstr - Print the string starting at the top of the stack,
+ * pStr - Print the string starting at the top of the stack,
  * followed by a new line.
  * @stack: pointer to the head of the stack
  * @line_number: line number
  * Return: Nothing (void)
  */
 
-void pstr(stack_t **stack, unsigned int line_number)
+void pStr(stack_t **stack, unsigned int line_number)
 {
     stack_t *temp;
     int i;

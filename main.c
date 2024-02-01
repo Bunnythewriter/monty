@@ -9,7 +9,7 @@ glob_t my_global;
  */
 int main(int argc, char *argv[])
 {
-    instruction_t opcodes[14] = {{"push", push_s}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"sub", sub}, {"div", div}, {"mul", mul}, {"mod", mod}, {"pChar", pChar}, {"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}};
+    instruction_t opcodes[14] = {{"push", push_s}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"sub", sub}, {"div", div}, {"mul", mul}, {"mod", mod}, {"pChar", pChar}, {"pStr", pStr}, {"rotl", rotl}, {"rotr", rotr}};
     int line_number = 1, getl_res = 0;
     size_t buf_size = 0;
     stack_t *stack = NULL;
