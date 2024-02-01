@@ -9,7 +9,7 @@ glob_t my_global;
  */
 int main(int argc, char *argv[])
 {
-    instruction_t opcodes[14] = {{"push", push_s}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"sub", sub}, {"div", divi}, {"mul", mul}, {"mod", mod}, {"pchar", pchar}, {"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}};
+    instruction_t opcodes[14] = {{"push", push_s}, {"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap}, {"add", add}, {"sub", sub}, {"div", div}, {"mul", mul}, {"mod", mod}, {"pchar", pchar}, {"pstr", pstr}, {"rotl", rotl}, {"rotr", rotr}};
     int line_number = 1, getl_res = 0;
     size_t buf_size = 0;
     stack_t *stack = NULL;
@@ -42,7 +42,7 @@ void check_opc(char *Line_buffer, instruction_t (*opcodes)[], int line_number,
                stack_t **stack)
 {
     int i, len = strlen(Line_buffer);
-    char message[100];
+    char mess[100];
 
     if (Line_buffer[len - 1] == '\n')
         Line_buffer[len - 1] = 0;
@@ -70,8 +70,8 @@ void check_opc(char *Line_buffer, instruction_t (*opcodes)[], int line_number,
     }
     if (i == 14)
     {
-        sprintf(message, "L%d: unknown instruction %s", line_number, Line_buffer);
-        error_mes(message, "", stack);
+        sprintf(mess, "L%d: unknown instruction %s", line_number, Line_buffer);
+        error_mes(mess, "", stack);
     }
     return;
 }

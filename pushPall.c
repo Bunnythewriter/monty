@@ -79,8 +79,8 @@ void pop(stack_t **stack, unsigned int line_number)
     free(iterator);
 }
 /**
- * error_mes - Prints error message and exits with failure.
- * @mess: Message to print.
+ * error_mes - Prints error mess and exits with failure.
+ * @mess: mess to print.
  * @arg: Additional argument.
  * @stack: stack to free.
  */

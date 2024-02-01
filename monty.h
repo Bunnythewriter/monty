@@ -14,19 +14,19 @@
  */
 typedef struct stack_s
 {
-	int n;
-	struct stack_s *prev;
-	struct stack_s *next;
+    int n;
+    struct stack_s *prev;
+    struct stack_s *next;
 } stack_t;
 /**
-* struct glob - Structure for global variable (Is this cheating? xD).
-* @Line_buffer: Result of getline on file.
-* @file: File to read.
-*/
+ * struct glob - Structure for global variable (Is this cheating? xD).
+ * @Line_buffer: Result of getline on file.
+ * @file: File to read.
+ */
 typedef struct glob
 {
-	char *Line_buffer;
-	FILE *file;
+    char *Line_buffer;
+    FILE *file;
 } glob_t;
 
 extern glob_t my_global;
@@ -40,8 +40,8 @@ extern glob_t my_global;
  */
 typedef struct instruction_s
 {
-	char *opcode;
-	void (*f)(stack_t **stack, unsigned int line_number);
+    char *opcode;
+    void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 void push_s(stack_t **stack, unsigned int line_number);
 void push_q(stack_t **stack, unsigned int line_number);
@@ -51,7 +51,7 @@ void pop(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
 void add(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
-void divi(stack_t **stack, unsigned int line_number);
+void div(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
