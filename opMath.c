@@ -34,20 +34,20 @@ void sub(stack_t **stack, unsigned int line_number)
     pop(stack, line_number);
 }
 /**
- * div - Calculates the divsion of the top 2 elements on stack or queue.
+ * divv - Calculates the divvsion of the top 2 elements on stack or queue.
  * @stack: Stack.
  * @line_number: Line number.
  */
-void div(stack_t **stack, unsigned int line_number)
+void divv(stack_t **stack, unsigned int line_number)
 {
     char mess[100];
 
-    sprintf(mess, "L%d: can't div, stack too short", line_number);
+    sprintf(mess, "L%d: can't divv, stack too short", line_number);
     if (!stack)
         error_mes("No stack present.", "", stack);
     if (!*stack || !(*stack)->next)
         error_mes(mess, "", stack);
-    sprintf(mess, "L%d: divsion by zero", line_number);
+    sprintf(mess, "L%d: divvsion by zero", line_number);
     if (!(*stack)->n)
         error_mes(mess, "", stack);
     (*stack)->next->n /= (*stack)->n;
@@ -84,7 +84,7 @@ void mod(stack_t **stack, unsigned int line_number)
         error_mes("No stack present.", "", stack);
     if (!*stack || !(*stack)->next)
         error_mes(mess, "", stack);
-    sprintf(mess, "L%d: divsion by zero", line_number);
+    sprintf(mess, "L%d: divvsion by zero", line_number);
     if (!(*stack)->n)
         error_mes(mess, "", stack);
     (*stack)->next->n %= (*stack)->n;
