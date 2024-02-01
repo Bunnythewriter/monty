@@ -13,7 +13,7 @@ void push_s(stack_t **stack, unsigned int line_number)
         error_mes("No stack present.", "", stack);
     arg = strtok(NULL, " \t");
     sprintf(mess, "L%d: usage: push integer", line_number);
-    if (!arg || !isnumber(arg))
+    if (!arg || !isNumber(arg))
         error_mes(mess, "", stack);
     new = malloc(sizeof(stack_t));
     if (!new)
@@ -39,7 +39,7 @@ void push_q(stack_t **stack, unsigned int line_number)
         error_mes("No stack present.", "", stack);
     arg = strtok(NULL, " \t");
     sprintf(mess, "L%d: usage: push integer", line_number);
-    if (!arg || !isnumber(arg))
+    if (!arg || !isNumber(arg))
         error_mes(mess, "", stack);
     new = malloc(sizeof(stack_t));
     if (!new)
